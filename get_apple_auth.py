@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 def get_auth():
   # Setup headless Firefox web driver.
   fireFoxOptions = webdriver.FirefoxOptions()
-  fireFoxOptions.headless = True
+  fireFoxOptions.add_argument('--headless')
 
   with webdriver.Firefox(options = fireFoxOptions) as driver:
     # Reduce the scope of tracked requests to those to the API for podcasts. This way we can reasonably expect
